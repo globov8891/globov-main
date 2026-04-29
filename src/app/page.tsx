@@ -130,12 +130,12 @@ export default function Home() {
 
           <div className="relative z-10 min-h-[430px] lg:min-h-[640px]" aria-hidden="true">
             <Image
-              src="/assets/browser-ui.png"
+              src="/assets/browser-ui-cut.png"
               alt="Интерфейс антидетект браузера Linken Sphere"
               width={1200}
               height={900}
               priority
-              className="absolute left-0 top-16 w-[76%] max-w-[720px] -rotate-[7deg] rounded-[32px] opacity-90 shadow-[0_0_70px_rgba(45,136,255,.35)] lg:left-[-30px] lg:top-20"
+              className="absolute left-0 top-16 w-[76%] max-w-[720px] -rotate-[7deg] opacity-95 drop-shadow-[0_0_44px_rgba(45,136,255,.45)] lg:left-[-30px] lg:top-20"
             />
             <Image
               src="/assets/astronaut.png"

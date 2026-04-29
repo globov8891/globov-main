@@ -25,7 +25,6 @@ export function PromoActions() {
         className="group inline-flex h-14 items-center justify-center gap-3 rounded-2xl bg-[#f4ff4f] px-6 text-sm font-extrabold text-slate-950 shadow-[0_0_34px_rgba(244,255,79,.28)] transition hover:-translate-y-0.5 hover:bg-[#fbff74] focus:outline-none focus:ring-2 focus:ring-[#f4ff4f]/70"
         aria-label="Скопировать промокод LS_GLOBOV"
       >
-        <span aria-hidden="true">⧉</span>
         {copied ? "Промокод скопирован" : "Скопировать промокод"}
       </button>
 
