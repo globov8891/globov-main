@@ -1,14 +1,8 @@
 import Image from "next/image";
+import { HeroVisual } from "./HeroVisual";
 import { PromoActions } from "./PromoActions";
 
 const PROMO = "LS_GLOBOV";
-
-const benefits = [
-  { title: "5 профилей бесплатно", text: "Старт без оплаты" },
-  { title: "Windows и macOS", text: "Работа на десктопе" },
-  { title: "Локальное хранение", text: "Шифрование данных" },
-  { title: "Скидка 10%", text: "Промокод LS_GLOBOV" },
-];
 
 const faq = [
   {
@@ -95,7 +89,6 @@ export default function Home() {
           </a>
 
           <nav className="hidden items-center gap-10 text-sm font-medium text-slate-300 md:flex" aria-label="Навигация по странице">
-            <a className="transition hover:text-white" href="#benefits">Преимущества</a>
             <a className="transition hover:text-white" href="#tariffs">Тарифы</a>
             <a className="transition hover:text-white" href="#faq">FAQ</a>
           </nav>
@@ -108,8 +101,8 @@ export default function Home() {
           </a>
         </header>
 
-        <div id="top" className="relative z-20 mx-auto grid max-w-7xl gap-6 pt-8 md:h-[calc(100vh-174px)] md:items-center md:pt-0">
-          <div className="relative z-40 max-w-2xl md:max-w-[58%] lg:max-w-2xl lg:pb-8">
+        <div id="top" className="relative z-20 mx-auto grid max-w-7xl gap-6 pt-8 md:h-[calc(100vh-92px)] md:items-center md:pt-0">
+          <div className="relative z-40 max-w-2xl md:max-w-[58%] lg:max-w-2xl">
             <p className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/[.055] px-4 py-2 text-sm text-slate-200 shadow-[inset_0_0_22px_rgba(255,255,255,.035)] backdrop-blur">
               <span className="text-[#d7e8ff]">✦</span> Промокод Linken Sphere 2026
             </p>
@@ -136,40 +129,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative min-h-[390px] sm:min-h-[520px] md:absolute md:inset-y-0 md:right-[-112px] md:z-10 md:w-[58%] lg:right-[-36px]" aria-hidden="true">
-            <Image
-              src="/assets/browser-ui-cut.png"
-              alt="Интерфейс антидетект браузера Linken Sphere"
-              width={1200}
-              height={900}
-              priority
-              className="absolute left-[2%] top-[3%] w-[72%] max-w-[720px] -rotate-[6deg] opacity-92 drop-shadow-[0_0_42px_rgba(45,136,255,.42)] sm:left-[10%] sm:top-[2%] md:left-[-4%] md:top-[17%] md:w-[88%] lg:left-[0%] lg:top-[14%] lg:w-[76%]"
-            />
-            <Image
-              src="/assets/astronaut.png"
-              alt="Космонавт Linken Sphere"
-              width={800}
-              height={1100}
-              priority
-              className="absolute bottom-0 right-[-12%] h-[92%] w-auto max-w-none object-contain drop-shadow-[0_0_40px_rgba(61,151,255,.25)] sm:right-[-2%] md:right-0 md:bottom-0 md:h-[70%] lg:bottom-0 lg:h-[84%]"
-            />
-            <div className="absolute left-[18%] top-[54%] rounded-2xl border border-cyan-300/14 bg-slate-950/58 px-4 py-3 text-xs text-cyan-100 shadow-[0_0_28px_rgba(56,189,248,.15)] backdrop-blur-md sm:text-sm md:left-[8%] md:top-[52%] lg:left-[18%] lg:top-[54%]">
-              <b className="block text-white">Безопасность</b>
-              <span className="text-slate-400">Локальный профиль · Шифрование</span>
-            </div>
-          </div>
-        </div>
-
-        <div id="benefits" className="relative z-20 mx-auto mt-4 grid max-w-7xl gap-2 rounded-3xl border border-white/10 bg-[#050b18]/56 p-2 shadow-[inset_0_0_42px_rgba(255,255,255,.022)] backdrop-blur md:absolute md:bottom-5 md:left-8 md:right-8 md:mt-0 md:grid-cols-2 lg:bottom-6 lg:left-12 lg:right-12 lg:grid-cols-4">
-          {benefits.map((item, index) => (
-            <article key={item.title} className="flex items-center gap-3 rounded-2xl border border-white/8 bg-slate-950/22 p-4">
-              <div className="grid size-10 shrink-0 place-items-center rounded-full border border-[#8bb7e8]/45 text-[#d7e8ff]">{index === 0 ? "✓" : index === 1 ? "⌘" : index === 2 ? "◇" : "%"}</div>
-              <div>
-                <h2 className="text-sm font-bold text-white sm:text-base">{item.title}</h2>
-                <p className="mt-0.5 text-xs leading-5 text-slate-400">{item.text}</p>
-              </div>
-            </article>
-          ))}
+          <HeroVisual />
         </div>
       </section>
 
