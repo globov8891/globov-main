@@ -102,22 +102,24 @@ export default function Home() {
 
           <a
             href="#promo"
-            className="hidden rounded-2xl border border-[#d7e867]/55 px-5 py-3 text-sm font-bold text-[#d7e867] shadow-[0_0_22px_rgba(215,232,103,.10)] transition hover:bg-[#d7e867]/10 sm:inline-flex"
+            className="hidden rounded-2xl border border-[#8bb7e8]/55 px-5 py-3 text-sm font-bold text-[#d7e8ff] shadow-[0_0_22px_rgba(101,169,238,.10)] transition hover:bg-[#d7e8ff]/10 sm:inline-flex"
           >
             Получить скидку 🎁
           </a>
         </header>
 
         <div id="top" className="relative z-20 mx-auto grid max-w-7xl gap-6 pt-8 md:h-[calc(100vh-174px)] md:items-center md:pt-0">
-          <div className="max-w-2xl md:max-w-[58%] lg:max-w-2xl lg:pb-8">
+          <div className="relative z-40 max-w-2xl md:max-w-[58%] lg:max-w-2xl lg:pb-8">
             <p className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/[.055] px-4 py-2 text-sm text-slate-200 shadow-[inset_0_0_22px_rgba(255,255,255,.035)] backdrop-blur">
-              <span className="text-[#d7e867]">✦</span> Промокод Linken Sphere 2026
+              <span className="text-[#d7e8ff]">✦</span> Промокод Linken Sphere 2026
             </p>
 
-            <h1 id="hero-title" className="mt-7 text-balance text-[46px] font-black leading-[0.98] tracking-[-0.055em] text-white sm:text-[54px] md:text-[56px] lg:text-[76px] xl:text-[84px]">
-              Linken Sphere
-              <span className="mt-1 block text-[#d7e867] drop-shadow-[0_0_18px_rgba(215,232,103,.18)]">
-                скидка 10% по промокоду
+            <h1 id="hero-title" className="mt-7 text-balance tracking-[-0.055em]">
+              <span className="block text-[48px] font-black leading-[0.94] text-white sm:text-[62px] md:text-[64px] lg:text-[82px] xl:text-[92px]">
+                Linken Sphere
+              </span>
+              <span className="mt-4 block max-w-[640px] text-[28px] font-extrabold leading-[1.08] tracking-[-0.035em] text-slate-100 sm:text-[36px] md:text-[38px] lg:text-[48px] xl:text-[54px]">
+                скидка <span className="rounded-2xl border border-[#8bb7e8]/28 bg-[#8bb7e8]/10 px-3 py-0.5 text-[#d7e8ff] shadow-[0_0_22px_rgba(101,169,238,.16)]">10%</span> по промокоду
               </span>
             </h1>
 
@@ -125,18 +127,7 @@ export default function Home() {
               Антидетект браузер для мультиаккаунтинга, арбитража, крипты, маркетплейсов и командной работы. Введите промокод при регистрации и получите скидку на оплату.
             </p>
 
-            <button
-              id="promo"
-              type="button"
-              aria-label="Промокод LS_GLOBOV. Нажмите кнопку ниже, чтобы скопировать"
-              className="mt-7 w-full max-w-[560px] rounded-[22px] border border-[#d7e867]/30 bg-[#050b18]/62 p-5 text-left shadow-[0_0_38px_rgba(40,108,178,.14),inset_0_0_32px_rgba(255,255,255,.028)] backdrop-blur-md"
-            >
-              <span className="text-sm text-slate-400">Ваш промокод</span>
-              <span className="mt-1 flex items-center justify-between gap-4">
-                <strong className="text-[38px] font-black tracking-[0.08em] text-[#d7e867] drop-shadow-[0_0_13px_rgba(215,232,103,.30)] sm:text-5xl">{PROMO}</strong>
-                <span className="grid size-12 place-items-center rounded-2xl border border-white/10 bg-white/8 text-lg text-slate-200" aria-hidden="true">⧉</span>
-              </span>
-            </button>
+            <PromoActions variant="card" />
 
             <PromoActions />
 
@@ -169,10 +160,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="benefits" className="relative z-30 mx-auto mt-4 grid max-w-7xl gap-2 rounded-3xl border border-white/10 bg-[#050b18]/56 p-2 shadow-[inset_0_0_42px_rgba(255,255,255,.022)] backdrop-blur md:absolute md:bottom-5 md:left-8 md:right-8 md:mt-0 md:grid-cols-2 lg:bottom-6 lg:left-12 lg:right-12 lg:grid-cols-4">
+        <div id="benefits" className="relative z-20 mx-auto mt-4 grid max-w-7xl gap-2 rounded-3xl border border-white/10 bg-[#050b18]/56 p-2 shadow-[inset_0_0_42px_rgba(255,255,255,.022)] backdrop-blur md:absolute md:bottom-5 md:left-8 md:right-8 md:mt-0 md:grid-cols-2 lg:bottom-6 lg:left-12 lg:right-12 lg:grid-cols-4">
           {benefits.map((item, index) => (
             <article key={item.title} className="flex items-center gap-3 rounded-2xl border border-white/8 bg-slate-950/22 p-4">
-              <div className="grid size-10 shrink-0 place-items-center rounded-full border border-[#d7e867]/45 text-[#d7e867]">{index === 0 ? "✓" : index === 1 ? "⌘" : index === 2 ? "◇" : "%"}</div>
+              <div className="grid size-10 shrink-0 place-items-center rounded-full border border-[#8bb7e8]/45 text-[#d7e8ff]">{index === 0 ? "✓" : index === 1 ? "⌘" : index === 2 ? "◇" : "%"}</div>
               <div>
                 <h2 className="text-sm font-bold text-white sm:text-base">{item.title}</h2>
                 <p className="mt-0.5 text-xs leading-5 text-slate-400">{item.text}</p>
@@ -184,7 +175,7 @@ export default function Home() {
 
       <section id="tariffs" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-12" aria-labelledby="tariffs-title">
         <div className="max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#d7e867]">Тарифы и скидка</p>
+          <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#d7e8ff]">Тарифы и скидка</p>
           <h2 id="tariffs-title" className="mt-4 text-3xl font-black tracking-tight sm:text-5xl">Промокод для оплаты Linken Sphere</h2>
           <p className="mt-5 text-lg leading-8 text-slate-300">Используйте <strong className="text-white">LS_GLOBOV</strong>, чтобы получить скидку 10%. Блок тарифов расширим после финального согласования оффера и партнёрской ссылки.</p>
         </div>
