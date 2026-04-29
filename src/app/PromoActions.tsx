@@ -18,11 +18,11 @@ export function PromoActions() {
   }
 
   return (
-    <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+    <div className="mt-5 flex flex-col gap-3 sm:flex-row">
       <button
         type="button"
         onClick={copyPromo}
-        className="group inline-flex h-14 items-center justify-center gap-3 rounded-2xl bg-[#f4ff4f] px-6 text-sm font-extrabold text-slate-950 shadow-[0_0_34px_rgba(244,255,79,.28)] transition hover:-translate-y-0.5 hover:bg-[#fbff74] focus:outline-none focus:ring-2 focus:ring-[#f4ff4f]/70"
+        className="inline-flex h-13 items-center justify-center rounded-2xl bg-[#d7e867] px-6 text-sm font-extrabold text-slate-950 shadow-[0_0_24px_rgba(215,232,103,.18)] transition hover:-translate-y-0.5 hover:bg-[#e0ef7a] focus:outline-none focus:ring-2 focus:ring-[#d7e867]/60 sm:h-14"
         aria-label="Скопировать промокод LS_GLOBOV"
       >
         {copied ? "Промокод скопирован" : "Скопировать промокод"}
@@ -32,7 +32,7 @@ export function PromoActions() {
         href="https://linkensphere.com/"
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className="inline-flex h-14 items-center justify-center gap-3 rounded-2xl border border-[#f4ff4f]/55 bg-slate-950/35 px-6 text-sm font-bold text-[#f4ff4f] backdrop-blur transition hover:-translate-y-0.5 hover:border-[#f4ff4f] hover:bg-[#f4ff4f]/10 focus:outline-none focus:ring-2 focus:ring-[#f4ff4f]/50"
+        className="inline-flex h-13 items-center justify-center gap-3 rounded-2xl border border-[#d7e867]/45 bg-slate-950/35 px-6 text-sm font-bold text-[#d7e867] backdrop-blur transition hover:-translate-y-0.5 hover:border-[#d7e867] hover:bg-[#d7e867]/10 focus:outline-none focus:ring-2 focus:ring-[#d7e867]/45 sm:h-14"
         aria-label="Перейти к регистрации Linken Sphere"
       >
         Перейти к регистрации <span aria-hidden="true">→</span>
